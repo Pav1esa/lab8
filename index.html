@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Лабораторна робота з Bootstrap</title>
+
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <!-- Навігаційна панель -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Мій Сайт</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Форми</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Інші
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Діяльність 1</a></li>
+                            <li><a class="dropdown-item" href="#">Діяльність 2</a></li>
+                            <li><a class="dropdown-item" href="#">Діяльність 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Головний контейнер -->
+    <div class="container mt-4">
+        <h1 class="text-center">Ласкаво просимо!</h1>
+        <p class="text-center">Це мій приклад сайту з використанням Bootstrap.</p>
+
+        <!-- Форма з Bootstrap -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email адреса</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">Ми ніколи не поділимося вашою електронною поштою.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Запам'ятати мене</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Надіслати</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карусель -->
+    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/завантаження (1).jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/завантаження (3).jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/завантаження (4).jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Кнопка для виклику модального вікна -->
+    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Запустити модальне вікно
+    </button>
+
+    <!-- Модальне вікно -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Модальне вікно</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Це тіло модального вікна. Ви можете додати сюди текст або інші елементи.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                    <button type="button" class="btn btn-primary">Зберегти зміни</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Інша форма -->
+    <form class="mt-4">
+        <div class="mb-3">
+            <label for="name" class="form-label">Ім'я</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email адреса</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="select" class="form-label">Оберіть країну</label>
+            <select class="form-select" id="select" required>
+                <option selected>Україна</option>
+                <option value="1">США</option>
+                <option value="2">Німеччина</option>
+                <option value="3">Франція</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ваш вік</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="age" id="age1" value="18-25" required>
+                    <label class="form-check-label" for="age1">18-25</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="age" id="age2" value="26-35" required>
+                    <label class="form-check-label" for="age2">26-35</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="age" id="age3" value="36+" required>
+                    <label class="form-check-label" for="age3">36+</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="comments" class="form-label">Коментарі</label>
+            <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Надіслати</button>
+    </form>
+
+    <!-- Картка -->
+    <div class="card mt-4" style="width: 18rem;">
+        <img src="img/завантаження (3).jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Назва картки</h5>
+              <p class="card-text">Це опис картки. Ви можете розповісти про щось важливе тут.</p>
+              <a href="#" class="btn btn-primary">Перейти далі</a>
+          </div>
+      </div>
+
+
+        <!-- Головний контейнер -->
+    <div class="container mt-4">
+      <div class="row">
+          <!-- Ліва колонка -->
+          <div class="col-md-4">
+              <h2>Ліва колонка</h2>
+              <p>Це текст для лівої колонки.</p>
+              <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="right" title="Це спливаюча підказка!">
+                  Показати підказку
+              </button>
+          </div>
+
+          <!-- Центральна колонка -->
+          <div class="col-md-8">
+              <h1 class="text-center">Ласкаво просимо!</h1>
+              <p class="text-center">Це мій приклад сайту з використанням Bootstrap.</p>
+              <!-- Додаємо зображення -->
+    <div class="text-center mt-4">
+      <img src="img/завантаження (1).jpg" alt="Опис зображення" class="img-fluid">
+  </div>
+
+              <!-- Форма з Bootstrap -->
+              <div class="row justify-content-center">
+                  <div class="col-md-6">
+                      <form>
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Email адреса</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                              <div id="emailHelp" class="form-text">Ми ніколи не поділимося вашою електронною поштою.</div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" required>
+                          </div>
+                          <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Запам'ятати мене</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Надіслати</button>
+                      </form>
+                  </div>
+              </div>
+              
+              <!-- Інфографіка -->
+              <div class="mt-4">
+                  <h3>Інфографіка</h3>
+                  <img src="img/завантаження (2).jpg" alt="Інфографіка" class="img-fluid">
+              </div>
+          </div>
+      </div>
+
+      <!-- Картка -->
+      <div class="card mt-4" style="width: 18rem;">
+          <img src="img/завантаження (3).jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Назва картки</h5>
+              <p class="card-text">Це опис картки. Ви можете розповісти про щось важливе тут.</p>
+              <a href="#" class="btn btn-primary">Перейти далі</a>
+          </div>
+      </div>
+
+      <!-- Нижній колонтитул -->
+      <footer class="mt-4 bg-light text-center py-3">
+          <p>© 2024 Мій Сайт. Всі права захищені.</p>
+      </footer>
+  </div>
+  
+      <!-- Підключення JS -->
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/script.js"></script>
+      <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+  </body>
+  </html>
+  
